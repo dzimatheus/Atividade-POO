@@ -1,0 +1,14 @@
+class ImageMessage extends AbstractMessage {
+
+    private String url;
+
+    public ImageMessage(String sender, String url) {
+        super(sender);
+        this.url = url;
+    }
+
+    @Override
+    public void send() {
+        System.out.println("[Imagem] " + sender + " enviou: " + url);
+    }
+}
