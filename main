@@ -1,0 +1,23 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Library biblioteca = new Library();
+
+        Book b1 = new Book("123", "Java Básico", "Autor X");
+        Book b2 = new Book("456", "POO Avançado", "Autor Y");
+
+        biblioteca.adicionarLivro(b1);
+        biblioteca.adicionarLivro(b2);
+
+        Leitor l1 = new Leitor("João", 20);
+
+        // Buscar e emprestar
+        Book livro = biblioteca.buscarPorTitulo("Java Básico");
+
+        biblioteca.emprestarLivro(livro, l1);
+
+        // Verificação
+        System.out.println("Livro atual de " + l1.getNome() + ": " 
+                           + l1.getLivroAtual().getTitulo());
+    }
+}
