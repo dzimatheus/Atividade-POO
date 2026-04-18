@@ -1,0 +1,29 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Group grupo = new Group("Estudos");
+
+        User u1 = new User("João");
+        User u2 = new User("Maria");
+        Admin admin = new Admin("Carlos");
+
+        grupo.addUser(u1);
+        grupo.addUser(u2);
+        grupo.addUser(admin);
+
+        Message m1 = new TextMessage(u1.getName(), "Alguém entendeu a matéria?");
+        Message m2 = new ImageMessage(u2.getName(), "print.png");
+        Message m3 = new VideoMessage(u1.getName(), "explicacao.mp4");
+        Message m4 = new AudioMessage(u2.getName(), "audio.mp3");
+
+        grupo.sendMessage(m1);
+        grupo.sendMessage(m2);
+        grupo.sendMessage(m3);
+        grupo.sendMessage(m4);
+
+        grupo.showMessages();
+
+        // ação de admin
+        admin.removeUser(grupo, u2);
+    }
+}
