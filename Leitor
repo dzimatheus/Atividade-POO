@@ -1,0 +1,24 @@
+class Leitor {
+    private String nome;
+    private int idade;
+    private Book livroAtual;
+
+    public Leitor(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+        this.livroAtual = null;
+    }
+
+    public void lerLivro(Book livro) {
+        this.livroAtual = livro;
+        livro.adicionarLeitor(this);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Book getLivroAtual() {
+        return livroAtual;
+    }
+}
