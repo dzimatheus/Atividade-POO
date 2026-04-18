@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Library {
+    private List<Book> livros;
+
+    public Library() {
+        livros = new ArrayList<>();
+    }
+
+    public void adicionarLivro(Book livro) {
+        livros.add(livro);
+    }
+
+    public Book buscarPorTitulo(String titulo) {
+        for (Book b : livros) {
+            if (b.getTitulo().equalsIgnoreCase(titulo)) {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    public Book buscarPorAutor(String autor) {
+        for (Book b : livros) {
+            if (b.getAutor().equalsIgnoreCase(autor)) {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    public void emprestarLivro(Book livro, Leitor leitor) {
+        if (livro != null && leitor != null) {
+            leitor.lerLivro(livro); // reaproveita lógica do exercício 1
+            System.out.println(leitor.getNome() + " pegou o livro \"" 
+                               + livro.getTitulo() + "\" emprestado.");
+        }
+    }
+}
