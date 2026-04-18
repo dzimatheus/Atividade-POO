@@ -1,0 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
+
+        PaymentMethod p1 = new CreditCard("1234-5678");
+        PaymentMethod p2 = new Money();
+        PaymentMethod p3 = new Pix("email@email.com");
+
+        p1.pay(100);
+        p2.pay(50);
+        p3.pay(75);
+    }
+}
