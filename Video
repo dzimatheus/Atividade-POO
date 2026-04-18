@@ -1,0 +1,14 @@
+class VideoMessage extends AbstractMessage {
+
+    private String url;
+
+    public VideoMessage(String sender, String url) {
+        super(sender);
+        this.url = url;
+    }
+
+    @Override
+    public void send() {
+        System.out.println("[Vídeo] " + sender + " enviou: " + url);
+    }
+}
