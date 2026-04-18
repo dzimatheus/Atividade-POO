@@ -1,0 +1,14 @@
+class TextMessage extends AbstractMessage {
+
+    private String text;
+
+    public TextMessage(String sender, String text) {
+        super(sender);
+        this.text = text;
+    }
+
+    @Override
+    public void send() {
+        System.out.println("[Texto] " + sender + ": " + text);
+    }
+}
