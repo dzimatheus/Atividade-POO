@@ -1,0 +1,23 @@
+class User {
+    protected String name;
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+class Admin extends User {
+
+    public Admin(String name) {
+        super(name);
+    }
+
+    public void removeUser(Group group, User user) {
+        group.removeUser(user);
+        System.out.println("Admin " + name + " removeu " + user.getName());
+    }
+}
