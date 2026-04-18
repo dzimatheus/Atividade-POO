@@ -1,0 +1,13 @@
+class Pix implements PaymentMethod {
+
+    private String chave;
+
+    public Pix(String chave) {
+        this.chave = chave;
+    }
+
+    @Override
+    public void pay(double amount) {
+        System.out.println("Pagamento de R$" + amount + " via PIX (chave: " + chave + ")");
+    }
+}
