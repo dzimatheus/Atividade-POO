@@ -1,0 +1,7 @@
+abstract class AbstractMessage implements Message {
+    protected String sender;
+
+    public AbstractMessage(String sender) {
+        this.sender = sender;
+    }
+}
