@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Shape s1 = new Retangulo(5, 3);
+        Shape s2 = new Circulo(2);
+
+        System.out.println("Área Retângulo: " + s1.calcularArea());
+        System.out.println("Perímetro Retângulo: " + s1.calcularPerimetro());
+
+        System.out.println("Área Círculo: " + s2.calcularArea());
+        System.out.println("Perímetro Círculo: " + s2.calcularPerimetro());
+    }
+}
