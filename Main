@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Book b1 = new Book("123", "Java Básico", "Autor X");
+        Book b2 = new Book("456", "POO Avançado", "Autor Y");
+
+        Leitor l1 = new Leitor("João", 20);
+        Leitor l2 = new Leitor("Maria", 22);
+
+        l1.lerLivro(b1);
+        l2.lerLivro(b1);
+
+        System.out.println("Leitores do livro: " + b1.getTitulo());
+        for (Leitor l : b1.getLeitores()) {
+            System.out.println(l.getNome());
+        }
+    }
+}
