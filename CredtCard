@@ -1,0 +1,13 @@
+class CreditCard implements PaymentMethod {
+
+    private String numero;
+
+    public CreditCard(String numero) {
+        this.numero = numero;
+    }
+
+    @Override
+    public void pay(double amount) {
+        System.out.println("Pagamento de R$" + amount + " com Cartão de Crédito");
+    }
+}
