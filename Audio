@@ -1,0 +1,14 @@
+class AudioMessage extends AbstractMessage {
+
+    private String url;
+
+    public AudioMessage(String sender, String url) {
+        super(sender);
+        this.url = url;
+    }
+
+    @Override
+    public void send() {
+        System.out.println("[Áudio] " + sender + " enviou: " + url);
+    }
+}
